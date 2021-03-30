@@ -5,7 +5,7 @@
 		<meta name="description" content="Documentation of jQlipboard" />
 		<meta name="author" content="Diriector_Doc" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="last-updated" content="Sat, 20 Mar 2021 03:45 GMT" />
+		<meta name="last-updated" content="Tue, 30 Mar 2021 15:03 GMT" />
 		<meta name="keywords" content="diriector_doc, diriectordoc, diriector doc, jqlipboard, jquery, documentation" />
 		<meta property="og:title" content="jQlipboard - Full Documentation" />
 		<meta property="og:type" content="website" />
@@ -58,9 +58,10 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#jQuery-copy2">jQuery.copy( String )</a>
+											<a href="#jQuery-copy2">jQuery.copy( Data )</a>
 											<ul>
 												<li><a href="#jQuery-copy2">jQuery.copy( String )</a></li>
+												<li><a href="#jQuery-copy2">jQuery.copy( Data )</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -144,6 +145,18 @@
 													</li>
 												</ul>
 											</li>
+											<li class="signature">
+												<h4 class="name">
+													<span class="version-details">version added: <a href="javascrip:void 0">v0.3</a></span><a id="slice-start-end2" href="#slice-start-end2"><span class="icon-link"></span>jQuery.copy( Data )</a>
+												</h4>
+												<ul>
+													<li>
+														<div><strong>Data</strong></div>
+														<div>Type: <a href="javascript:void 0">Anything</a></div>
+														<div>Any data that can be coppied as a string</div>
+													</li>
+												</ul>
+											</li>
 										</ul>
 										<div class="longdesc">
 											<p>This is function works similarly to the <code>window.copy</code> which is availible in the console of <a href="https://developers.google.com/web/tools/chrome-devtools/console/utilities#copy">some browsers</a>. A string that is imputed into this function will be copied to the clipboard. Upon a successful execution, this function will return <code>true</code>.</p>
@@ -164,7 +177,33 @@
 													</tbody>
 												</table>
 											</div>
-											<p>The text "Copied!" will be copied to the clipboard. This process will not invote a copying event listener.</p>
+											<p>The text "Copied!" will be copied to the clipboard. This process will not invoke a copying event listener.</p>
+											<p>If the Data passed into <code>$.copy</code> is not already a string, it will become one if its <code>.toString()</code> function returns a usable string. Otherwise, the function will copy a jsonified string of the parameter.</p>
+											<div class="syntaxhighlighter">
+												<table>
+													<tbody>
+														<tr>
+															<td class="gutter">
+																<div class="line">1</div>
+																<div class="line">2</div>
+																<div class="line">3</div>
+																<div class="line">4</div>
+																<div class="line">5</div>
+																<div class="line">6</div>
+																<div class="line">7</div>
+																<div class="line">8</div>
+																<div class="line">9</div>
+																<div class="line">10</div>
+																<div class="line">11</div>
+															</td>
+															<td class="code">
+																<pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><br /></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>$.copy( <span class="number">1234</span> ) <span class="comment">// "1234" is copied</span></code></div></div><div class="container"><div class="line"><code>$.copy( <span class="literal">false</span> ) <span class="comment">// "false" is copied</span></code></div></div><div class="container"><div class="line"><code>$.copy( {hello: <span class="string">"world"</span>} ) <span class="comment">// '{"hello":"world"}' is copied</span></code></div></div><div class="container"><div class="line"><code>$.copy( <span class="keyword">new</span> Date(<span class="string">"1/1/2021"</span>) ) <span class="comment">// "2021-01-01T05:00:00.000Z" is copied</span></code></div></div><div class="container"><div class="line"><code>$.copy( document.querySelector(<span class="string">"div"</span>) ) <span class="comment">// "&lt;div&gt;Hello World&lt;/div&gt;" is copied</span></code></div></div><div class="container"><div class="line"><code>$.copy( <span class="number">12345678901234567890n</span> ) <span class="comment">// "12345678901234567890" is copied</span></code></div></div><div class="container"><div class="line"><code>$.copy( {toString: <span class="keyword">function</span>(){<span class="keyword">return</span> <span class="string">"Hello World"</span>} ) <span class="comment">// "Hello World" is copied</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div></pre>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p>Note: string conversion will not work correctly if the <code>.toString()</code> function returns the exact string of <code>"[object Object]"</code>.</p>
 										</div>
 									</div>
 								</article>
