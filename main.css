@@ -478,8 +478,8 @@ table {
 .content-right #sidebar,
 .sidebar-left {
 	-webkit-border-image: 0;
-	background-image: radial-gradient(right, #F2F2F2, #FFFFFF80%);
-	border-image: linear-gradient(#FFFFFF, #E7E7E715%, #E7E7E785%, #FFFFFF);
+	background-image: radial-gradient(right, #F2F2F2, #FFFFFF80);
+	border-image: linear-gradient(#FFFFFF, #E7E7E715, #E7E7E785, #FFFFFF);
 	border-left: 0;
 	border-right: 1px solid #E7E7E7;
 	box-shadow: inset 15px 0 5px -16px #E7E7E7;
@@ -525,7 +525,7 @@ table {
 	padding: 10px;
 }
 
-.footer {
+.license {
 	line-height: normal;
 }
 
@@ -841,9 +841,9 @@ table {
 #sidebar,
 .sidebar-right {
 	-webkit-border-image: 0;
-	background-image: radial-gradient(left, #F2F2F2, #FFFFFF80%);
+	background-image: radial-gradient(left, #F2F2F2, #FFFFFF80);
 	border: 0;
-	border-image: linear-gradient(#FFFFFF, #E7E7E715%, #E7E7E785%, #FFFFFF);
+	border-image: linear-gradient(#FFFFFF, #E7E7E715, #E7E7E785, #FFFFFF);
 	border-left: 1px solid #efefef;
 	box-shadow: inset 15px 0 5px -16px #E7E7E7;
 	float: right;
