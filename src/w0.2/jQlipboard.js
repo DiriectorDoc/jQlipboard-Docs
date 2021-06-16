@@ -11,7 +11,7 @@
  *	Copyright (c) 2020–2021 Diriector_Doc (DiriectorDoc on github)
  **/
 (function($) {
-
+	console.log("%cNotice of Deprecation", "font-size:3em", "\njQlipboard source files will be moved in the neer future. On July 1st of this year, the new location of this extention, will be located at diriectordoc.github.io/jQlipboard/\n\nSee https://github.com/DiriectorDoc/jQlipboard for more information.");
 	if(!$) return;
 
 	let selec = window.getSelection();
